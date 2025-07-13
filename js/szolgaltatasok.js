@@ -299,7 +299,7 @@ class ImageGallery {
         this.pauseAutoPlay(); // Clear any existing interval
         this.autoPlayInterval = setInterval(() => {
             this.nextSlide();
-        }, 2000); // Change image every 2 seconds
+        }, 1500); // Change image every 2 seconds
     }
     
     pauseAutoPlay() {
