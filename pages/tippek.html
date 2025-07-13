@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tippek - Gazirtó Földesi</title>
+    <link rel="icon" type="image/jpeg" href="../assets/images/logok/favicon.jpg">
+    <link rel="stylesheet" href="../css/tippek.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <img src="../assets/images/logok/logo.png" alt="Gazirtó Földesi Logo" class="logo-img">
+                <span>Gazirtó Földesi</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Főoldal</a></li>
+                <li><a href="szolgaltatasok.html" class="nav-link"><i class="fas fa-cogs"></i> Szolgáltatások</a></li>
+                <li><a href="tippek.html" class="nav-link active"><i class="fas fa-lightbulb"></i> Tippek</a></li>
+                <li><a href="partnerek.html" class="nav-link"><i class="fas fa-handshake"></i> Partnerek</a></li>
+                <li><a href="kapcsolat.html" class="nav-link"><i class="fas fa-envelope"></i> Kapcsolat</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hasznos Tippek</h1>
+            <p>Szakértői tanácsok a hatékony gyomirtáshoz és megelőzéshez</p>
+        </div>
+    </section>
+
+    <!-- Tips Categories -->
+    <section class="tips-categories">
+        <div class="container">
+            <div class="category-tabs">
+                <button class="tab-btn active" data-category="prevention">Megelőzés</button>
+                <button class="tab-btn" data-category="natural">Természetes Módszerek</button>
+                <button class="tab-btn" data-category="timing">Időzítés</button>
+                <button class="tab-btn" data-category="tools">Eszközök</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips Content -->
+    <section class="tips-content">
+        <div class="container">
+            <!-- Prevention Tips -->
+            <div class="tips-category active" id="prevention">
+                <h2>Megelőzési Tippek</h2>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3>Talaj Előkészítése</h3>
+                        <p>A jól előkészített talaj kulcsfontosságú a gyomok megelőzésében. Mélyre ható ásás és a gyommaradványok eltávolítása jelentősen csökkenti a jövőbeli gyomosodást.</p>
+                        <ul>
+                            <li>Alapos talajforgatás ősszel</li>
+                            <li>Gyökérmaradványok eltávolítása</li>
+                            <li>Talaj pH értékének ellenőrzése</li>
+                        </ul>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3>Mulcsolás</h3>
+                        <p>A mulcs réteg megakadályozza a gyommagvak csírázását és megőrzi a talaj nedvességét. Használjon szerves anyagokat, mint fűnyírás, levelek vagy szalma.</p>
+                        <ul>
+                            <li>5-10 cm vastag mulcs réteg</li>
+                            <li>Szerves anyagok használata</li>
+                            <li>Rendszeres pótlás szükséges</li>
+                        </ul>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-water"></i>
+                        </div>
+                        <h3>Vízelvezetés</h3>
+                        <p>A megfelelő vízelvezetés megakadályozza a vízkedvelő gyomok elszaporodását. Kerülje a pangó vizet és biztosítson megfelelő lefolyást.</p>
+                        <ul>
+                            <li>Drénrendszer kialakítása</li>
+                            <li>Lejtés biztosítása</li>
+                            <li>Pangó víz elkerülése</li>
+                        </ul>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <h3>Fénykezelés</h3>
+                        <p>Sok gyom az árnyékos területeket kedveli. A megfelelő megvilágítás és az árnyékolás megszüntetése segíthet a gyomok visszaszorításában.</p>
+                        <ul>
+                            <li>Ágak megnyesése</li>
+                            <li>Sűrű növényzet ritkítása</li>
+                            <li>Napfény biztosítása</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Natural Methods -->
+            <div class="tips-category" id="natural">
+                <h2>Természetes Gyomirtási Módszerek</h2>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <h3>Ecetes Gyomirtás</h3>
+                        <p>A 20%-os ecetsav hatékony természetes gyomirtó. Legjobban fiatal gyomoknál működik, száraz, napos időben alkalmazva.</p>
+                        <ul>
+                            <li>20%-os ecetsav használata</li>
+                            <li>Napos időben permetezés</li>
+                            <li>Fiatal gyomoknál leghatékonyabb</li>
+                        </ul>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <h3>Forró Víz</h3>
+                        <p>A forró víz azonnal elpusztítja a gyomokat. Különösen hatékony járólapok és térkövek közötti gyomoknál.</p>
+                        <ul>
+                            <li>Forrásban lévő víz használata</li>
+                            <li>Közvetlenül a gyomra öntés</li>
+                            <li>Ismétlés szükséges lehet</li>
+                        </ul>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-hand-paper"></i>
+                        </div>
+                        <h3>Kézi Gyomlálás</h3>
+                        <p>A legbiztonságosabb módszer, különösen dísznövények közelében. Nedves talajban könnyebb a gyökerestül való kihúzás.</p>
+                        <ul>
+                            <li>Nedves talajban végzés</li>
+                            <li>Gyökerestül eltávolítás</li>
+                            <li>Megfelelő eszközök használata</li>
+                        </ul>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-cut"></i>
+                        </div>
+                        <h3>Rendszeres Kaszálás</h3>
+                        <p>A rendszeres kaszálás meggyengíti a gyomokat és megakadályozza a magképződést. Különösen hatékony nagyobb területeken.</p>
+                        <ul>
+                            <li>Hetente 1-2 alkalommal</li>
+                            <li>Virágzás előtt kaszálás</li>
+                            <li>Alacsony vágás alkalmazása</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timing Tips -->
+            <div class="tips-category" id="timing">
+                <h2>Időzítési Tippek</h2>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-calendar-spring"></i>
+                        </div>
+                        <h3>Tavaszi Kezelés</h3>
+                        <p>A tavasz a legfontosabb időszak a gyomirtásban. Ilyenkor a gyomok fiatalok és könnyebben irthatók.</p>
+                        <ul>
+                            <li>Március-április optimális</li>
+                            <li>Fiatal gyomok irtása</li>
+                            <li>Megelőző kezelések</li>
+                        </ul>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <h3>Napi Időzítés</h3>
+                        <p>A gyomirtó szerek hatékonysága függ az alkalmazás időpontjától. Kerülje a szeles és esős időszakokat.</p>
+                        <ul>
+                            <li>Reggeli vagy esti órák</li>
+                            <li>Szélmentes időben</li>
+                            <li>Eső előtt 24 órával</li>
+                        </ul>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>Növényi Fejlettség</h3>
+                        <p>A gyomok fejlettségi állapota meghatározza a kezelés hatékonyságát. A fiatal, 2-4 leveles állapot az ideális.</p>
+                        <ul>
+                            <li>2-4 leveles állapot</li>
+                            <li>Aktív növekedési fázis</li>
+                            <li>Virágzás előtti időszak</li>
+                        </ul>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-snowflake"></i>
+                        </div>
+                        <h3>Őszi Előkészítés</h3>
+                        <p>Az őszi talajmunka és kezelések meghatározzák a következő év gyomosodását. Fontos a gyökérgyomok kezelése.</p>
+                        <ul>
+                            <li>Szeptember-október</li>
+                            <li>Gyökérgyomok irtása</li>
+                            <li>Talaj előkészítése</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools Tips -->
+            <div class="tips-category" id="tools">
+                <h2>Eszközök és Technikák</h2>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Kézi Eszközök</h3>
+                        <p>A megfelelő kézi eszközök jelentősen megkönnyítik a gyomlálást és hatékonyabbá teszik a munkát.</p>
+                        <ul>
+                            <li>Gyomláló kapa</li>
+                            <li>Gyökérkiemelő</li>
+                            <li>Sarló és kasza</li>
+                        </ul>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-fire-flame-curved"></i>
+                        </div>
+                        <h3>Gyomégető</h3>
+                        <p>A gyomégető hatékony eszköz járólapok és térkövek közötti gyomok eltávolítására. Biztonságosan használva környezetbarát.</p>
+                        <ul>
+                            <li>Gázüzemű égető</li>
+                            <li>Biztonságos használat</li>
+                            <li>Száraz időben alkalmazás</li>
+                        </ul>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-spray-can"></i>
+                        </div>
+                        <h3>Permetező Berendezések</h3>
+                        <p>A megfelelő permetező biztosítja a pontos és hatékony szeralkalmazást. Válassza ki a területnek megfelelő méretet.</p>
+                        <ul>
+                            <li>Kézi permetező</li>
+                            <li>Háti permetező</li>
+                            <li>Precíz fúvóka</li>
+                        </ul>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Védőfelszerelés</h3>
+                        <p>A biztonság mindig az első! Használjon megfelelő védőfelszerelést minden gyomirtási munkánál.</p>
+                        <ul>
+                            <li>Védőszemüveg</li>
+                            <li>Gumikesztyű</li>
+                            <li>Légzésvédő maszk</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expert Advice -->
+    <section class="expert-advice">
+        <div class="container">
+            <h2>Szakértői Tanács</h2>
+            <div class="advice-card">
+                <div class="advice-content">
+                    <h3>Mikor érdemes szakértőt hívni?</h3>
+                    <p>Ha a gyomok ellenállnak a házi módszereknek, vagy nagy területről van szó, érdemes szakértő segítségét kérni. A professzionális gyomirtás hosszú távon költséghatékonyabb lehet.</p>
+                    <div class="advice-points">
+                        <div class="point">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Nagy területű fertőzés esetén</span>
+                        </div>
+                        <div class="point">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Ellenálló gyomfajok jelenléténél</span>
+                        </div>
+                        <div class="point">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Ismétlődő problémák esetén</span>
+                        </div>
+                        <div class="point">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Időhiány vagy fizikai korlátok miatt</span>
+                        </div>
+                    </div>
+                    <a href="kapcsolat.html" class="btn btn-primary">Szakértői Segítség Kérése</a>
+                </div>
+                <div class="advice-image">
+                    <svg viewBox="0 0 300 200" class="advice-svg">
+                        <rect x="0" y="150" width="300" height="50" fill="#22c55e"/>
+                        <circle cx="150" cy="100" r="40" fill="#16a34a"/>
+                        <path d="M130 100 L140 110 L170 80" stroke="white" stroke-width="4" fill="none"/>
+                        <circle cx="80" cy="120" r="12" fill="#84cc16"/>
+                        <circle cx="220" cy="110" r="12" fill="#84cc16"/>
+                        <rect x="140" y="50" width="20" height="15" fill="#fbbf24"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Gazirtó Földesi</h3>
+                    <p>Professzionális gyomirtási szolgáltatások több mint 15 éves tapasztalattal.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Szolgáltatások</h3>
+                    <ul>
+                        <li><a href="#">Gyomirtás</a></li>
+                        <li><a href="#">Permetezés</a></li>
+                        <li><a href="#">Talajkezelés</a></li>
+                        <li><a href="#">Tanácsadás</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Kapcsolat</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +36 30 123 4567</li>
+                        <li><i class="fas fa-envelope"></i> info@gazirtofoldesi.hu</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 1234 Budapest, Példa utca 12.</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Információk</h3>
+                    <ul>
+                        <li><a href="#">Rólunk</a></li>
+                        <li><a href="#">Referenciák</a></li>
+                        <li><a href="#">ÁSZF</a></li>
+                        <li><a href="#">Adatvédelem</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Gazirtó Földesi. Minden jog fenntartva.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/tippek.js"></script>
+</body>
+</html>

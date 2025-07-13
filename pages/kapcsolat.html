@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapcsolat - Gazirtó Földesi</title>
+    <link rel="icon" type="image/jpeg" href="../assets/images/logok/favicon.jpg">
+    <link rel="stylesheet" href="../css/kapcsolat.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <img src="../assets/images/logok/logo.png" alt="Gazirtó Földesi Logo" class="logo-img">
+                Gazirtó Földesi
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Főoldal</a></li>
+                <li><a href="szolgaltatasok.html" class="nav-link"><i class="fas fa-cogs"></i> Szolgáltatások</a></li>
+                <li><a href="tippek.html" class="nav-link"><i class="fas fa-lightbulb"></i> Tippek</a></li>
+                <li><a href="partnerek.html" class="nav-link"><i class="fas fa-handshake"></i> Partnerek</a></li>
+                <li><a href="kapcsolat.html" class="nav-link active"><i class="fas fa-envelope"></i> Kapcsolat</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Kapcsolatfelvétel</h1>
+                <p>Vegye fel velünk a kapcsolatot ingyenes árajánlatért és szakmai tanácsadásért</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2>Küldjön Üzenetet</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Név *</label>
+                            <input type="text" id="name" name="name" required placeholder="Adja meg a nevét">
+                            <span class="error-message" id="nameError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">E-mail cím *</label>
+                            <input type="email" id="email" name="email" required placeholder="pelda@email.hu">
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Telefonszám</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+36 30 123 4567">
+                            <span class="error-message" id="phoneError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Szolgáltatás típusa</label>
+                            <select id="service" name="service">
+                                <option value="">Válasszon szolgáltatást</option>
+                                <option value="gyomirtas">Gyomirtás</option>
+                                <option value="permetezés">Permetezés</option>
+                                <option value="talajkezeles">Talajkezelés</option>
+                                <option value="tanacsadas">Tanácsadás</option>
+                                <option value="egyeb">Egyéb</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Üzenet *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Írja le részletesen a problémát vagy igényét..."></textarea>
+                            <span class="error-message" id="messageError"></span>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Üzenet Küldése
+                        </button>
+                    </form>
+                    
+                    <div class="form-success" id="formSuccess">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Köszönjük az üzenetét!</h3>
+                        <p>Hamarosan felvesszük Önnel a kapcsolatot.</p>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h2>Elérhetőségek</h2>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Telefon</h3>
+                            <p>+36 30 123 4567</p>
+                            <span>Hétfő - Péntek: 8:00 - 18:00</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>E-mail</h3>
+                            <p>info@gazirtofoldesi.hu</p>
+                            <span>24 órán belül válaszolunk</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Cím</h3>
+                            <p>1234 Budapest<br>Példa utca 12.</p>
+                            <span>Személyes konzultáció előzetes egyeztetéssel</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Nyitvatartás</h3>
+                            <p>Hétfő - Péntek: 8:00 - 18:00<br>Szombat: 9:00 - 14:00</p>
+                            <span>Vasárnap: Zárva</span>
+                        </div>
+                    </div>
+                    
+                    <div class="social-media">
+                        <h3>Kövessen Minket</h3>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" aria-label="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2>Találjon Meg Minket</h2>
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <svg viewBox="0 0 400 300" class="map-svg">
+                        <!-- Background -->
+                        <rect width="400" height="300" fill="#f0fdf4"/>
+                        
+                        <!-- Roads -->
+                        <path d="M0 150 L400 150" stroke="#d1d5db" stroke-width="3"/>
+                        <path d="M200 0 L200 300" stroke="#d1d5db" stroke-width="3"/>
+                        <path d="M50 100 L350 100" stroke="#e5e7eb" stroke-width="2"/>
+                        <path d="M50 200 L350 200" stroke="#e5e7eb" stroke-width="2"/>
+                        
+                        <!-- Buildings -->
+                        <rect x="80" y="120" width="40" height="30" fill="#9ca3af" opacity="0.7"/>
+                        <rect x="280" y="120" width="40" height="30" fill="#9ca3af" opacity="0.7"/>
+                        <rect x="150" y="80" width="30" height="20" fill="#9ca3af" opacity="0.7"/>
+                        <rect x="220" y="80" width="30" height="20" fill="#9ca3af" opacity="0.7"/>
+                        
+                        <!-- Our Location -->
+                        <circle cx="200" cy="150" r="8" fill="#16a34a"/>
+                        <circle cx="200" cy="150" r="15" fill="none" stroke="#16a34a" stroke-width="2" opacity="0.5">
+                            <animate attributeName="r" values="15;25;15" dur="2s" repeatCount="indefinite"/>
+                            <animate attributeName="opacity" values="0.5;0;0.5" dur="2s" repeatCount="indefinite"/>
+                        </circle>
+                        
+                        <!-- Location Pin -->
+                        <path d="M200 135 L200 145 L205 150 L200 155 L195 150 Z" fill="#16a34a"/>
+                        
+                        <!-- Text -->
+                        <text x="200" y="180" text-anchor="middle" fill="#16a34a" font-size="12" font-weight="bold">Gazirtó Földesi</text>
+                        <text x="200" y="195" text-anchor="middle" fill="#6b7280" font-size="10">Budapest, Példa utca 12.</text>
+                    </svg>
+                </div>
+                <div class="map-info">
+                    <h3>Megközelítés</h3>
+                    <ul>
+                        <li><i class="fas fa-car"></i> Autóval: Ingyenes parkolási lehetőség</li>
+                        <li><i class="fas fa-bus"></i> Tömegközlekedéssel: 4-es, 6-os villamos</li>
+                        <li><i class="fas fa-subway"></i> Metróval: M3-as vonal, Kálvin tér</li>
+                        <li><i class="fas fa-walking"></i> Gyalog: 5 perc a metrótól</li>
+                    </ul>
+                    <a href="https://maps.google.com" target="_blank" class="btn btn-outline">
+                        <i class="fas fa-external-link-alt"></i>
+                        Útvonaltervezés
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Gyakran Ismételt Kérdések</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Milyen gyorsan tudnak kijönni?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Normál esetben 2-3 munkanapon belül tudunk kiszállni. Sürgős esetekben akár 24 órán belül is vállaljuk a munkát.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Mennyibe kerül a gyomirtás?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Az árak a terület nagyságától és a gyomok típusától függenek. Ingyenes helyszíni felmérés után adunk pontos árajánlatot.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Környezetbarát módszereket használnak?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Igen, elsősorban környezetbarát és biológiai módszereket alkalmazunk. Vegyszeres kezelést csak szükség esetén végzünk.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Vállalnak garanciát a munkára?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Minden munkánkra 6 hónap garanciát vállalunk. Ha a gyomok visszatérnek, ingyenesen újra elvégezzük a kezelést.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Milyen területeken dolgoznak?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Budapest és Pest megye területén vállalunk munkát. Nagyobb projektek esetén országosan is dolgozunk.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Szükséges előzetes felkészülés?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nem szükséges különösebb előkészület. Csak arra kérjük, hogy a kezelendő terület legyen hozzáférhető.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Gazirtó Földesi</h3>
+                    <p>Professzionális gyomirtási szolgáltatások több mint 15 éves tapasztalattal.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Szolgáltatások</h3>
+                    <ul>
+                        <li><a href="#">Gyomirtás</a></li>
+                        <li><a href="#">Permetezés</a></li>
+                        <li><a href="#">Talajkezelés</a></li>
+                        <li><a href="#">Tanácsadás</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Kapcsolat</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +36 30 123 4567</li>
+                        <li><i class="fas fa-envelope"></i> info@gazirtofoldesi.hu</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 1234 Budapest, Példa utca 12.</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Információk</h3>
+                    <ul>
+                        <li><a href="#">Rólunk</a></li>
+                        <li><a href="#">Referenciák</a></li>
+                        <li><a href="#">ÁSZF</a></li>
+                        <li><a href="#">Adatvédelem</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Gazirtó Földesi. Minden jog fenntartva.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/kapcsolat.js"></script>
+</body>
+</html>
