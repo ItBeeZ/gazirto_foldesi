@@ -139,21 +139,78 @@ if (contactForm) {
         const originalText = submitBtn.innerHTML;
         submitBtn.classList.add('loading');
         submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Küldés...';
         
         try {
-            // Simulate form submission
-            await new Promise(resolve => setTimeout(resolve, 2000));
+            // EmailJS inicializálása, ha még nem történt meg
+            if (typeof initializeEmailJS === 'function') {
+                initializeEmailJS();
+            }
             
-            // Hide form and show success message
-            contactForm.style.display = 'none';
-            formSuccess.classList.add('show');
+            // Email küldése EmailJS-sel
+            const result = await sendEmailViaEmailJS(formData);
             
-            // Scroll to success message
-            formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            if (result.success) {
+                // Hide form and show success message
+                contactForm.style.display = 'none';
+                formSuccess.classList.add('show');
+                
+                // Scroll to success message
+                formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+                // Reset form for potential future use
+                contactForm.reset();
+                
+                // Remove validation classes
+                const fields = contactForm.querySelectorAll('input, textarea, select');
+                fields.forEach(field => {
+                    field.classList.remove('error', 'success');
+                });
+                
+            } else {
+                throw new Error(result.error || 'Ismeretlen hiba történt');
+            }
             
         } catch (error) {
             console.error('Form submission error:', error);
-            alert('Hiba történt az üzenet küldése során. Kérjük, próbálja újra később.');
+            
+            // Felhasználóbarát hibaüzenet
+            let userMessage = 'Hiba történt az üzenet küldése során. ';
+            
+            if (error.message.includes('EmailJS nincs betöltve')) {
+                userMessage += 'Az email szolgáltatás nem érhető el. Kérjük, próbálja újra később, vagy vegye fel velünk a kapcsolatot telefonon.';
+            } else if (error.message.includes('Túl sok kérés')) {
+                userMessage += 'Túl sok üzenetet küldött rövid időn belül. Kérjük, várjon néhány percet, majd próbálja újra.';
+            } else if (error.message.includes('Hitelesítési hiba')) {
+                userMessage += 'Technikai probléma lépett fel. Kérjük, vegye fel velünk a kapcsolatot telefonon.';
+            } else {
+                userMessage += 'Kérjük, ellenőrizze az internetkapcsolatát és próbálja újra, vagy vegye fel velünk a kapcsolatot telefonon.';
+            }
+            
+            // Hibaüzenet megjelenítése
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'form-error';
+            errorDiv.innerHTML = `
+                <i class="fas fa-exclamation-triangle"></i>
+                <p>${userMessage}</p>
+                <p><strong>Alternatív elérhetőségek:</strong></p>
+                <p>📞 06-30/460-3898</p>
+                <p>📧 gazirtokertesz@gmail.com</p>
+            `;
+            
+            // Beszúrjuk a hibaüzenetet a form elé
+            contactForm.parentNode.insertBefore(errorDiv, contactForm);
+            
+            // Scroll to error message
+            errorDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            // Eltávolítjuk a hibaüzenetet 10 másodperc után
+            setTimeout(() => {
+                if (errorDiv.parentNode) {
+                    errorDiv.parentNode.removeChild(errorDiv);
+                }
+            }, 10000);
+            
         } finally {
             // Reset button state
             submitBtn.classList.remove('loading');
