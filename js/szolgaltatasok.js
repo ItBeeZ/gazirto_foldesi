@@ -196,9 +196,10 @@ const createScrollProgress = () => {
     document.body.appendChild(progressBar);
     
     window.addEventListener('scroll', () => {
+
         const scrollTop = window.pageYOffset;
-        const docHeight = document.body.offsetHeight - window.innerHeight;
-        const scrollPercent = (scrollTop / docHeight) * 100;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrollPercent = (scrollTop / scrollHeight) * 100;
         progressBar.style.width = scrollPercent + '%';
     });
 };
@@ -206,23 +207,7 @@ const createScrollProgress = () => {
 // Initialize scroll progress
 createScrollProgress();
 
-// Add smooth reveal animation for footer
-const footer = document.querySelector('.footer');
-if (footer) {
-    const footerObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, { threshold: 0.1 });
-    
-    footer.style.opacity = '0';
-    footer.style.transform = 'translateY(50px)';
-    footer.style.transition = 'all 0.8s ease';
-    footerObserver.observe(footer);
-}
+// Footer is now visible by default without animation
 
 // Image Gallery Functionality
 class ImageGallery {

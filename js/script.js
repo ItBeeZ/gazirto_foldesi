@@ -181,21 +181,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Add typing effect to hero title
-const typeWriter = (element, text, speed = 100) => {
-    let i = 0;
-    element.innerHTML = '';
-    
-    const timer = setInterval(() => {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-        } else {
-            clearInterval(timer);
-        }
-    }, speed);
-};
-
 // Scroll Progress Indicator
 const createScrollProgress = () => {
     const progressBar = document.createElement('div');
@@ -212,14 +197,3 @@ const createScrollProgress = () => {
 
 // Initialize scroll progress
 createScrollProgress();
-
-// Initialize typing effect
-window.addEventListener('load', () => {
-    const heroTitle = document.querySelector('.hero h1');
-    if (heroTitle) {
-        const originalText = heroTitle.textContent;
-        setTimeout(() => {
-            typeWriter(heroTitle, originalText, 50);
-        }, 500);
-    }
-});

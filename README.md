@@ -127,8 +127,8 @@ A jelenlegi verzió SVG ikonokat használ. Valódi képek hozzáadásához:
 
 Ha kérdése van a weboldallal kapcsolatban, vegye fel a kapcsolatot:
 
-- Email: info@gazirtofoldesi.hu
-- Telefon: +36 XX XXX XXXX
+- Email: gazirtokertesz@gmail.com
+- Telefon: 06-30/460-3898
 
 ---
 

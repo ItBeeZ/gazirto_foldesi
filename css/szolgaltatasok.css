@@ -128,22 +128,41 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-    padding: 120px 20px 80px;
+    /*https: //pixabay.com/photos/farmer-labor-work-field-tree-line-7892631/*/
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    padding: 120px 0 80px;
     text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../assets/images/services_hero_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: blur(5px);
+    z-index: -1;
 }
 
 .hero-content h1 {
     font-size: 3rem;
     font-weight: 700;
-    color: #1f2937;
+    color: #ffffff;
     margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-content p {
     font-size: 1.25rem;
-    color: #6b7280;
+    color: #f3f4f6;
     max-width: 600px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* Services Detail Section */
@@ -452,8 +471,12 @@ body {
         left: 0;
     }
     
-    .hero-content h1 {
-        font-size: 2.5rem;
+    .hero {
+        background-attachment: scroll;
+    }
+    
+    .hero::before {
+        background-attachment: scroll;
     }
     
     .service-detail {
@@ -595,4 +618,16 @@ html {
         opacity: 1;
         transform: scale(1);
     }
+}
+
+/* Scroll Progress Bar */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, #16a34a, #22c55e);
+    z-index: 9999;
+    transition: width 0.1s ease;
 }

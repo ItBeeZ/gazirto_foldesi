@@ -128,22 +128,41 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-    padding: 120px 20px 80px;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    padding: 120px 0 80px;
     text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /*https: //unsplash.com/photos/minimalist-photography-of-three-crank-phones-71CjSSB83Wo*/
+    background: url('../assets/images/contact_us_hero_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: blur(5px);
+    z-index: -1;
 }
 
 .hero-content h1 {
     font-size: 3rem;
     font-weight: 700;
-    color: #1f2937;
+    color: #ffffff;
     margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-content p {
     font-size: 1.25rem;
-    color: #6b7280;
+    color: #f3f4f6;
     max-width: 600px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* Contact Section */
@@ -443,55 +462,17 @@ body {
 }
 
 .map-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 3rem;
-    align-items: center;
-}
-
-.map-placeholder {
-    background: white;
+    max-width: 100%;
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.map-svg {
+.map-container iframe {
     width: 100%;
-    height: auto;
-    display: block;
-}
-
-.map-info {
-    background: white;
-    padding: 2.5rem;
+    height: 400px;
+    border: none;
     border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.map-info h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 1.5rem;
-}
-
-.map-info ul {
-    list-style: none;
-    margin-bottom: 2rem;
-}
-
-.map-info li {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    color: #374151;
-}
-
-.map-info li i {
-    color: #16a34a;
-    width: 20px;
 }
 
 /* FAQ Section */
@@ -643,8 +624,18 @@ body {
         left: 0;
     }
     
+    .hero {
+        background-attachment: scroll;
+    }
+    
+    .hero::before {
+        background-attachment: scroll;
+    }
+    
     .hero-content h1 {
         font-size: 2.5rem;
+        color: #ffffff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     }
     
     .contact-grid {
@@ -656,21 +647,32 @@ body {
         padding: 2rem;
     }
     
-    .map-container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+    .map-container iframe {
+        height: 300px;
     }
     
 
 }
 
 @media (max-width: 480px) {
+    .hero {
+        background-attachment: scroll;
+    }
+    
+    .hero::before {
+        background-attachment: scroll;
+    }
+    
     .hero-content h1 {
         font-size: 2rem;
+        color: #ffffff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     }
     
     .hero-content p {
         font-size: 1rem;
+        color: #f3f4f6;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     }
     
     .contact-form-container {
@@ -686,9 +688,7 @@ body {
         text-align: center;
     }
     
-    .map-info {
-        padding: 1.5rem;
-    }
+
     
     .faq-section h2 {
         font-size: 2rem;
