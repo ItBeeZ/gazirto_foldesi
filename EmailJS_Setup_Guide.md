@@ -42,8 +42,11 @@ Ez az útmutató segít beállítani az EmailJS szolgáltatást a kapcsolati űr
 Új üzenet a weboldalról - {{from_name}}
 ```
 
-**Content (Tartalom):**
+**Content (Tartalom) - FONTOS: HTML FORMÁTUM:**
 
+⚠️ **FIGYELEM**: A szép HTML email formátumhoz használja a `HTML_EMAIL_TEMPLATE_GUIDE.md` fájlban található HTML template-et!
+
+**Egyszerű szöveges verzió (nem ajánlott):**
 ```
 Új üzenet érkezett a weboldalról:
 
@@ -58,6 +61,9 @@ Szolgáltatás: {{service}}
 ---
 Ez az üzenet automatikusan lett küldve a weboldal kapcsolati űrlapjából.
 ```
+
+**HTML verzió (ajánlott):**
+Lásd: `HTML_EMAIL_TEMPLATE_GUIDE.md` fájl a teljes HTML template-ért.
 
 **To Email:**
 

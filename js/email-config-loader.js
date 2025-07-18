@@ -23,6 +23,13 @@ function loadEnvironmentConfig() {
         config.templateId = window.EMAILJS_CONFIG.templateId;
     }
     
+    // Ellenőrizzük a production config objektumot is
+    if (typeof PRODUCTION_CONFIG !== 'undefined') {
+        config.publicKey = PRODUCTION_CONFIG.publicKey;
+        config.serviceId = PRODUCTION_CONFIG.serviceId;
+        config.templateId = PRODUCTION_CONFIG.templateId;
+    }
+    
     // Ha nincs window konfiguráció, próbáljuk a localStorage-ból
     // (fejlesztési célokra)
     if (!config.publicKey) {

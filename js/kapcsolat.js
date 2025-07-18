@@ -55,16 +55,14 @@ const validators = {
     name: (value) => value.length >= 2,
     email: (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value),
     phone: (value) => value === '' || /^[\+]?[0-9\s\-\(\)]{10,}$/.test(value),
-    message: (value) => value.length >= 10,
-    privacy: (value) => value === 'on'
+    message: (value) => value.length >= 10
 };
 
 const errorMessages = {
     name: 'A név legalább 2 karakter hosszú legyen',
     email: 'Kérjük, adjon meg egy érvényes e-mail címet',
     phone: 'Kérjük, adjon meg egy érvényes telefonszámot',
-    message: 'Az üzenet legalább 10 karakter hosszú legyen',
-    privacy: 'Az adatvédelmi szabályzat elfogadása kötelező'
+    message: 'Az üzenet legalább 10 karakter hosszú legyen'
 };
 
 // Real-time Validation
@@ -72,11 +70,7 @@ if (contactForm) {
     const fields = contactForm.querySelectorAll('input, textarea, select');
     
     fields.forEach(field => {
-        if (field.type === 'checkbox' && field.name === 'privacy') {
-            field.addEventListener('change', () => {
-                validateField(field, validators[field.name], errorMessages[field.name]);
-            });
-        } else if (validators[field.name]) {
+        if (validators[field.name]) {
             field.addEventListener('blur', () => {
                 validateField(field, validators[field.name], errorMessages[field.name]);
             });
@@ -103,20 +97,10 @@ if (contactForm) {
         const nameField = document.getElementById('name');
         const emailField = document.getElementById('email');
         const messageField = document.getElementById('message');
-        const privacyField = document.getElementById('privacy');
         
         if (!validateField(nameField, validators.name, errorMessages.name)) isValid = false;
         if (!validateField(emailField, validators.email, errorMessages.email)) isValid = false;
         if (!validateField(messageField, validators.message, errorMessages.message)) isValid = false;
-        
-        // Check privacy checkbox
-        const privacyError = document.getElementById('privacyError');
-        if (!privacyField.checked) {
-            privacyError.textContent = errorMessages.privacy;
-            isValid = false;
-        } else {
-            privacyError.textContent = '';
-        }
         
         // Validate optional phone field if filled
         const phoneField = document.getElementById('phone');

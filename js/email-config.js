@@ -30,6 +30,8 @@ const TEMPLATE_PARAMS = {
     phone: 'phone',           // {{phone}} a template-ben
     service: 'service',       // {{service}} a template-ben
     message: 'message',       // {{message}} a template-ben
+    subject: 'subject',       // {{subject}} a template-ben
+    time: 'time',             // {{time}} a template-ben
     to_name: 'Gázirtó Kertész', // {{to_name}} a template-ben
     reply_to: 'email'         // {{reply_to}} a template-ben
 };
@@ -120,6 +122,28 @@ async function sendEmailViaEmailJS(formData) {
                      value = formData[formKey] || '';
                  }
                  templateParams[templateKey] = value;
+             } else if (formKey === 'subject') {
+                 // Dinamikus subject generálása
+                 const customerName = formData instanceof FormData ? formData.get('name') || 'Ügyfél' : (formData.name || 'Ügyfél');
+                 const serviceType = formData instanceof FormData ? formData.get('service') || 'általános' : (formData.service || 'általános');
+                 const serviceNames = {
+                     'gyomirtas': 'Gyomirtás',
+                     'permetezés': 'Permetezés', 
+                     'talajkezeles': 'Talajkezelés',
+                     'tanacsadas': 'Tanácsadás',
+                     'egyeb': 'Egyéb szolgáltatás'
+                 };
+                 const serviceName = serviceNames[serviceType] || 'Általános megkeresés';
+                 templateParams[templateKey] = `Új ügyféli megkeresés - ${serviceName} (${customerName})`;
+             } else if (formKey === 'time') {
+                 // Időbélyeg generálása
+                 templateParams[templateKey] = new Date().toLocaleString('hu-HU', {
+                     year: 'numeric',
+                     month: '2-digit', 
+                     day: '2-digit',
+                     hour: '2-digit',
+                     minute: '2-digit'
+                 });
              } else {
                  templateParams[templateKey] = formKey; // Statikus értékek (pl. to_name)
              }
