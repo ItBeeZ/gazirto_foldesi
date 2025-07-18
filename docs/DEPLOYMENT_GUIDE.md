@@ -5,7 +5,7 @@
 ### EmailJS Fiók Beállítása
 
 1. **Regisztráció**: [EmailJS.com](https://www.emailjs.com/)
-2. **Email szolgáltatás hozzáadása** (Gmail/Outlook/Yahoo)
+2. **Email szolgáltatás hozzáadása** (Gmail/Outlook/Yahoo)!
 3. **Email template létrehozása**
 4. **API kulcsok megszerzése**
 
