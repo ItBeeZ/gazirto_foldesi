@@ -110,20 +110,7 @@ EMAILJS_TEMPLATE_ID=template_xyz789
 
 2. **FONTOS**: Adja hozzá a `.env` fájlt a `.gitignore`-hoz!
 
-### Módszer B: Fejlesztési Környezet (localStorage)
-
-1. Nyissa meg a böngésző Developer Tools konzolját
-2. Futtassa a következő parancsot:
-
-```javascript
-setDevelopmentConfig(
-  "user_1a2b3c4d5e6f7g8h9i0j", // Public Key
-  "service_abc123", // Service ID
-  "template_xyz789" // Template ID
-);
-```
-
-### Módszer C: Szerver Oldali Konfiguráció (Ajánlott éles környezetben)
+### Módszer B: Szerver Oldali Konfiguráció (Ajánlott éles környezetben)
 
 1. A szerver oldali script állítsa be a konfigurációt:
 
@@ -210,7 +197,7 @@ console.log(getSecureEmailConfig());
 
 ### Fejlesztési vs. Éles Környezet:
 
-- Fejlesztésben: localStorage vagy .env fájl
+- Fejlesztésben: .env fájl
 - Éles környezetben: szerver oldali konfiguráció
 - Külön EmailJS service-ek használata ajánlott
 

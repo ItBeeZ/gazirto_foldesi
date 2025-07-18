@@ -1,32 +1,12 @@
 # EmailJS Gyors Beállítási Útmutató
 
-## Fejlesztési Környezet (5 perc)
-
-### 1. EmailJS Fiók és Beállítások
+## EmailJS Fiók és Beállítások
 
 1. Regisztráljon: [emailjs.com](https://www.emailjs.com/)
 2. Hozzon létre email service-t (Gmail ajánlott)
 3. Hozzon létre template-et az alábbi paraméterekkel:
    - `{{from_name}}`, `{{from_email}}`, `{{phone}}`, `{{service}}`, `{{message}}`
 4. Jegyezze fel: **Public Key**, **Service ID**, **Template ID**
-
-### 2. Gyors Konfiguráció (Fejlesztéshez)
-
-Nyissa meg a böngésző konzolját a kapcsolat oldalon és futtassa:
-
-```javascript
-setDevelopmentConfig(
-  "YOUR_PUBLIC_KEY", // EmailJS Public Key
-  "YOUR_SERVICE_ID", // EmailJS Service ID
-  "YOUR_TEMPLATE_ID" // EmailJS Template ID
-);
-```
-
-### 3. Tesztelés
-
-- Töltse ki a kapcsolati űrlapot
-- Ellenőrizze az email beérkezését
-- Konzolban nézze meg a hibaüzeneteket
 
 ---
 
@@ -99,9 +79,6 @@ services:
 ```javascript
 // Ellenőrizze a konfigurációt:
 console.log(getSecureEmailConfig());
-
-// Törölje a cache-t:
-clearStoredConfig();
 ```
 
 ### "EmailJS nincs betöltve"
