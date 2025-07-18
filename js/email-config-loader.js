@@ -9,11 +9,11 @@ function loadEnvironmentConfig() {
         templateId: null
     };
     
-    // Betöltjük a production config objektumot
-    if (typeof PRODUCTION_CONFIG !== 'undefined') {
-        config.publicKey = PRODUCTION_CONFIG.publicKey;
-        config.serviceId = PRODUCTION_CONFIG.serviceId;
-        config.templateId = PRODUCTION_CONFIG.templateId;
+    // Betöltjük a window.EMAILJS_CONFIG objektumot
+    if (typeof window !== 'undefined' && window.EMAILJS_CONFIG) {
+        config.publicKey = window.EMAILJS_CONFIG.publicKey;
+        config.serviceId = window.EMAILJS_CONFIG.serviceId;
+        config.templateId = window.EMAILJS_CONFIG.templateId;
     }
     
     return config;
