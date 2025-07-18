@@ -127,7 +127,7 @@ async function sendEmailViaEmailJS(formData) {
                  const customerName = formData instanceof FormData ? formData.get('name') || 'Ügyfél' : (formData.name || 'Ügyfél');
                  const serviceType = formData instanceof FormData ? formData.get('service') || 'általános' : (formData.service || 'általános');
                  const serviceNames = {
-                     'gyomirtas': 'Gyomirtás',
+                     'gyomirtas': 'Kertápolás',
                      'permetezés': 'Permetezés', 
                      'talajkezeles': 'Talajkezelés',
                      'tanacsadas': 'Tanácsadás',

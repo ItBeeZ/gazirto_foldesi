@@ -1,6 +1,6 @@
 # Gazirtó Földesi - Modern Weboldal
 
-Ez egy modern, letisztult weboldal a Gazirtó Földesi gyomirtási szolgáltatások számára.
+Ez egy modern, letisztult weboldal a Gazirtó Földesi kertészeti szolgáltatások számára.
 
 ## Jellemzők
 
@@ -23,15 +23,15 @@ Ez egy modern, letisztult weboldal a Gazirtó Földesi gyomirtási szolgáltatá
 
 1. **Főoldal (Hero)**: Figyelemfelkeltő bevezető szekció
 2. **Szolgáltatások**: 6 fő szolgáltatási terület bemutatása
-3. **Tippek**: Hasznos tanácsok a gyomirtásról
+3. **Tippek**: Hasznos tanácsok a kertápolásról
 4. **Partnerek**: Minőségi garanciák és tanúsítványok
 5. **Kapcsolat**: Elérhetőségek és kapcsolati űrlap
 
 ## Szolgáltatások
 
-- **Kémiai Gyomirtás**: Professzionális, engedélyezett szerekkel
+- **Kémiai Kertápolás**: Professzionális, engedélyezett szerekkel
 - **Környezetbarát Megoldások**: Természetes alapú módszerek
-- **Házikerti Gyomirtás**: Biztonságos házikerti szolgáltatások
+- **Házikerti Kertápolás**: Biztonságos házikerti szolgáltatások
 - **Ipari Területek**: Nagy területű gyommentesítés
 - **Járdák és Utak**: Speciális eszközökkel
 - **Rendszeres Karbantartás**: Hosszú távú szerződések
@@ -118,7 +118,7 @@ A jelenlegi verzió SVG ikonokat használ. Valódi képek hozzáadásához:
 
 - **CMS integráció**: WordPress vagy más CMS
 - **Többnyelvűség**: Magyar/angol verzió
-- **Blog szekció**: Gyomirtási tippek és hírek
+- **Blog szekció**: Kertápolási tippek és hírek
 - **Online árajánlat kérő**: Automatikus kalkulátor
 - **Galéria**: Munkák előtte/utána képei
 - **Ügyfél vélemények**: Testimonials szekció
