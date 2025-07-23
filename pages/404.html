@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Oldal nem található | Gazirtó Földesi</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="A keresett oldal nem található. Térjen vissza a Gazirtó Földesi főoldalára és találja meg a kertészeti szolgáltatásokat.">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <link rel="canonical" href="https://gazirto.hu/pages/404.html">
+    <link rel="icon" type="image/jpeg" href="../assets/images/logok/favicon.jpg">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #4a7c59 0%, #2c5530 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .error-container {
+            max-width: 600px;
+            padding: 2rem;
+        }
+        
+        .error-code {
+            font-size: 8rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .error-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #a8d5ba;
+        }
+        
+        .error-message {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #a8d5ba;
+            color: #2c5530;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 0 10px;
+        }
+        
+        .btn:hover {
+            background: #8bc7a0;
+            transform: translateY(-2px);
+        }
+        
+        .home-icon {
+            margin-right: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 6rem;
+            }
+            
+            .error-title {
+                font-size: 1.5rem;
+            }
+            
+            .error-container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-code">404</div>
+        <h1 class="error-title">Oldal nem található</h1>
+        <p class="error-message">
+            Sajnáljuk, de a keresett oldal nem található. Lehet, hogy az URL hibás, vagy az oldal át lett helyezve.
+        </p>
+        <div class="error-actions">
+            <a href="../index.html" class="btn">
+                <span class="home-icon">🏠</span>
+                Vissza a főoldalra
+            </a>
+            <a href="kapcsolat.html" class="btn">
+                <span class="home-icon">📞</span>
+                Kapcsolat
+            </a>
+        </div>
+    </div>
+    
+    <script>
+        // Automatikus átirányítás 10 másodperc után
+        setTimeout(function() {
+            window.location.href = '../index.html';
+        }, 10000);
+    </script>
+</body>
+</html>

@@ -733,6 +733,18 @@ body {
         text-align: center;
     }
     
+    .contact-icon {
+        align-self: center;
+    }
+    
+    .social-media {
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
 
     
     .faq-section h2 {
