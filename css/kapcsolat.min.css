@@ -634,6 +634,33 @@ body {
     color: #9ca3af
 }
 
+.footer-bottom a {
+    color: #d1d5db;
+    text-decoration: none;
+    transition: color .3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px
+}
+
+.footer-bottom a:visited {
+    color: #d1d5db
+}
+
+.footer-bottom a i {
+    font-size: 0.9rem;
+    color: #16a34a
+}
+
+.footer-bottom a:hover, .footer-bottom a:active {
+    color: #16a34a
+}
+
+.footer-bottom a:hover i {
+    transform: scale(1.2);
+    transition: transform .3s ease
+}
+
 @media (max-width:768px) {
     .hamburger {
         display: flex
