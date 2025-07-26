@@ -9,7 +9,7 @@ const emailConfig = {
     // A teljes API URL a backend szerverhez
     // Fejlesztési környezetben: http://localhost:5000/api
     // Éles környezetben: https://gazirto.hu/api
-    baseUrl: 'http://localhost:5000/api',
+    baseUrl: 'https://80.211.195.172:5000/api',
     endpoints: {
         giveaway: '/giveaway',
         verify: '/verify',
