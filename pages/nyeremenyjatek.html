@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyereményjáték - Gazirtó Földesi | Kertészeti Szolgáltatások Békéscsaba</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Vegyen részt nyereményjátékunkban! Gazirtó Földesi kertészeti szolgáltatások Békéscsabán. Regisztráljon és nyerjen értékes nyereményeket!">
+    <meta name="keywords" content="nyereményjáték, kertészeti szolgáltatások, Békéscsaba, gyomirtás, kertgondozás, sorsolás, regisztráció">
+    <meta name="author" content="Gazirtó Földesi">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Nyereményjáték - Gazirtó Földesi | Kertészeti Szolgáltatások">
+    <meta property="og:description" content="Vegyen részt nyereményjátékunkban! Regisztráljon és nyerjen értékes nyereményeket!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gazirto.hu/pages/nyeremenyjatek.html">
+    <meta property="og:site_name" content="Gazirtó Földesi">
+    <meta property="og:locale" content="hu_HU">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Nyereményjáték - Gazirtó Földesi">
+    <meta name="twitter:description" content="Vegyen részt nyereményjátékunkban! Regisztráljon és nyerjen értékes nyereményeket!">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Nyereményjáték - Gazirtó Földesi",
+        "description": "Nyereményjáték oldal a Gazirtó Földesi kertészeti szolgáltatásokhoz",
+        "mainEntity": {
+            "@type": "LocalBusiness",
+            "name": "Gazirtó Földesi",
+            "description": "Professzionális kertészeti szolgáltatások",
+            "telephone": "+36304603898",
+            "email": "gazirtokertesz@gmail.com",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Pásztor u.",
+                "addressLocality": "Békéscsaba",
+                "postalCode": "5600",
+                "addressCountry": "HU"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "46.6833",
+                "longitude": "21.0945"
+            },
+            "openingHours": "Mo-Su 08:00-18:00",
+            "sameAs": [
+                "https://www.facebook.com/profile.php?id=61560664590070"
+            ]
+        }
+    }
+    </script>
+    <link rel="canonical" href="https://gazirto.hu/pages/nyeremenyjatek.html">
+    <link rel="icon" type="image/jpeg" href="../assets/images/logok/favicon.jpg">
+    <link rel="stylesheet" href="../css/kapcsolat.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .prize-section {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+        }
+        
+        .prize-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .prize-item {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .prize-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .prize-icon {
+            font-size: 3rem;
+            color: #16a34a;
+            margin-bottom: 20px;
+        }
+        
+        .prize-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .prize-description {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .rules-section {
+            padding: 60px 0;
+        }
+        
+        .rules-list {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 30px;
+        }
+        
+        .rule-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .rule-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .rule-number {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: #16a34a;
+            color: white;
+            border-radius: 50%;
+            font-weight: 600;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .rule-content {
+            flex: 1;
+        }
+        
+        .rule-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        .rule-description {
+            color: #666;
+        }
+        
+        .registration-form-container {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .prize-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 30px;
+            background: #f0f9f0;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .success-message i {
+            font-size: 3rem;
+            color: #16a34a;
+            margin-bottom: 20px;
+        }
+        
+        .success-message h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .success-message p {
+            color: #666;
+        }
+        
+        .success-message.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <img src="../assets/images/logok/logo.png" alt="Gazirtó Földesi Logo" class="logo-img">
+                Gazirtó Földesi
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Főoldal</a></li>
+                <li><a href="szolgaltatasok.html" class="nav-link"><i class="fas fa-cogs"></i> Szolgáltatások</a></li>
+                <li><a href="tippek.html" class="nav-link"><i class="fas fa-lightbulb"></i> Tippek</a></li>
+                <li><a href="partnerek.html" class="nav-link"><i class="fas fa-handshake"></i> Partnerek</a></li>
+                <li><a href="nyeremenyjatek.html" class="nav-link active"><i class="fas fa-gift"></i> Nyereményjáték</a></li>
+                <li><a href="kapcsolat.html" class="nav-link"><i class="fas fa-envelope"></i> Kapcsolat</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Nyereményjáték</h1>
+                <p>Regisztráljon és nyerjen értékes kertészeti szolgáltatásokat!</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Registration Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Registration Form -->
+                <div class="contact-form-container">
+                    <h2>Regisztráljon a Nyereményjátékra</h2>
+                    <form class="contact-form" id="registrationForm">
+                        <div class="form-group">
+                            <label for="email">E-mail cím *</label>
+                            <input type="email" id="email" name="email" required placeholder="pelda@email.hu">
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="terms">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                Elfogadom a <a href="adatvedelem.html" target="_blank">játékszabályzatot és adatvédelmi tájékoztatót</a> *
+                            </label>
+                            <span class="error-message" id="termsError"></span>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Regisztráció
+                        </button>
+                    </form>
+                    
+                    <div class="success-message" id="formSuccess">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Köszönjük a regisztrációt!</h3>
+                        <p>Sikeresen regisztrált a nyereményjátékra. A sorsolás eredményéről e-mailben értesítjük.</p>
+                    </div>
+                </div>
+
+                <!-- Prize Info -->
+                <div class="contact-info">
+                    <h2>Nyeremények</h2>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Fődíj</h3>
+                            <p>Ingyenes szolgáltatás</p>
+                            <span>Egy szabadon választott szolgáltatás egy alkalommal</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Második díj</h3>
+                            <p>Ingyenes szolgáltatás</p>
+                            <span>Egy szabadon választott szolgáltatás egy alkalommal</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Harmadik díj</h3>
+                            <p>Ingyenes szolgáltatás</p>
+                            <span>Egy szabadon választott szolgáltatás egy alkalommal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rules Section -->
+    <section class="rules-section">
+        <div class="container">
+            <h2>Játékszabályzat</h2>
+            <ul class="rules-list">
+                <li class="rule-item">
+                    <div class="rule-number">1</div>
+                    <div class="rule-content">
+                        <h3 class="rule-title">Részvételi feltételek</h3>
+                        <p class="rule-description">A nyereményjátékban bárki részt vehet, aki megadja érvényes e-mail címét és elfogadja a játékszabályzatot.</p>
+                    </div>
+                </li>
+                
+                <li class="rule-item">
+                    <div class="rule-number">2</div>
+                    <div class="rule-content">
+                        <h3 class="rule-title">Nyeremények</h3>
+                        <p class="rule-description">A nyereményjáték során 3 nyertest sorsolunk ki, akik mindannyian egy-egy szabadon választható ingyenes szolgáltatást nyernek.</p>
+                    </div>
+                </li>
+                
+                <li class="rule-item">
+                    <div class="rule-number">3</div>
+                    <div class="rule-content">
+                        <h3 class="rule-title">Sorsolás</h3>
+                        <p class="rule-description">A sorsolás a játék lezárását követően történik, a nyerteseket e-mailben értesítjük.</p>
+                    </div>
+                </li>
+                
+                <li class="rule-item">
+                    <div class="rule-number">4</div>
+                    <div class="rule-content">
+                        <h3 class="rule-title">Adatkezelés</h3>
+                        <p class="rule-description">A megadott e-mail címeket kizárólag a nyereményjáték lebonyolításához használjuk fel, az adatvédelmi tájékoztatóban foglaltak szerint.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Gazirtó Földesi</h3>
+                    <p>Professzionális kertészeti szolgáltatások több mint 5+ éves tapasztalattal.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61560664590070" target="_blank"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Szolgáltatások</h3>
+                    <ul>
+                        <li><a href="#">Kertgondozás</a></li>
+                        <li><a href="#">Permetezés</a></li>
+                        <li><a href="#">Talajkezelés</a></li>
+                        <li><a href="#">Tanácsadás</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Kapcsolat</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> 06-30/460-3898</li>
+                        <li><i class="fas fa-envelope"></i> gazirtokertesz@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Békéscsaba, Pásztor u., 5600</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Gazirtó Földesi. Minden jog fenntartva. | <a href="adatvedelem.html"><i class="fas fa-shield-alt"></i> Adatvédelem</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- API konfiguráció betöltése -->
+    <script src="../js/email-config.js"></script>
+    <!-- Nyereményjáték funkcionalitás -->
+    <script src="../js/nyeremenyjatek.min.js"></script>
+</body>
+</html>

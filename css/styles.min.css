@@ -185,14 +185,14 @@ body {
 }
 
 .btn-primary {
-    background: #16a34a;
-    color: #fff
+    background: #fff;
+    color: #16a34a
 }
 
 .btn-primary:hover {
-    background: #15803d;
+    background: #f9fafb;
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(22, 163, 74, .3)
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .2)
 }
 
 .btn-secondary {
