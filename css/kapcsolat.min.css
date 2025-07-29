@@ -146,6 +146,13 @@ body {
     z-index: -1
 }
 
+.nyeremenyjatek .hero::before {
+    background: url('../assets/images/gift_main_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
 .hero-content h1 {
     font-size: 3rem;
     font-weight: 700;

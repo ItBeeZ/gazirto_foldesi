@@ -1,15 +1,12 @@
 // API konfiguráció a nyereményjáték számára
 const emailConfig = {
-    // Az API kulcs, amit a szerver oldalon beállítottunk
-    // Ezt a .env fájlban található API_KEY értékkel megegyezően kell beállítani
-    apiKey: 'q8r1s4t7u0v3w6x9y2z5A8B1C4D7E0F3G6H9I2J5K8L1M4N7O0P3Q6R9S2T5U8',
     
     // Egyéb konfigurációs beállítások
     // Ezeket a beállításokat a szerver oldali konfigurációval összhangban kell beállítani
     // A teljes API URL a backend szerverhez
-    // Fejlesztési környezetben: http://localhost:5000/api
-    // Éles környezetben: https://gazirto.hu/api
-    baseUrl: 'https://80.211.195.172:5000/api',
+    // Fejlesztési környezetben: http://localhost:3001/api
+    // Éles környezetben: https://api.gazirto.hu/api
+    baseUrl: 'https://api.gazirto.hu/api',
     endpoints: {
         giveaway: '/giveaway',
         verify: '/verify',
