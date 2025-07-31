@@ -1,0 +1,28 @@
+# Függőségek
+node_modules/
+
+# Környezeti változók
+.env
+
+# Logok
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Futásidejű adatok
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Könyvtár a műszerezett könyvtárak számára, amelyeket az istanbul létrehoz
+.nyc_output
+
+# Lefedettségi könyvtár, amelyet az eszközök használnak, mint például az istanbul
+coverage
+
+# Egyéb
+.DS_Store
+Thumbs.db
